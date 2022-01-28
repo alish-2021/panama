@@ -1,0 +1,135 @@
+/* VariaBleS ===================================== */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+img {
+    max-width: 100%;
+}
+h1 {
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    padding: 0;
+    margin: 0;
+}
+h3 {
+    padding: 0;
+    margin: 0;
+}
+h4 {
+    padding: 0;
+    margin: 0;
+}
+$px0: 0px;
+$px10: 10px;
+$px20: 20px;
+$px30: 30px;
+$px40: 40px;
+$px50: 50px;
+$px60: 60px;
+$px80: 80px;
+$px100: 100px;
+$flex: flex;
+$grid: grid;
+$white: #fff;
+$abs: absolute;
+$rel: relative;
+$pro100: 100%;
+$trans: 0.5s ease;
+$dblue: #183B56;
+$wblue: #159ED9;
+$px60: 60px;
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+%fbc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+%center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+%align-center {
+    display: flex;
+    align-items: center;
+}
+%ff1{
+    font-family: 'Roboto';
+}
+%ff2{
+    font-family: 'Exo 2';
+}
+%ff3{
+    font-family: 'Roboto';
+}
+p {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 400;
+    @extend %ff1;
+    color: #666666;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-25 {
+    margin-bottom: 25px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mb-35 {
+    margin-bottom: 35px;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.mb-50 {
+    margin-bottom: 50px;
+}
+.mb-60 {
+    margin-bottom: 60px;
+}
+.mb70 {
+    margin-bottom: 70px;
+}
+.mb-80 {
+    margin-bottom: 80px;
+}
+.mb-90 {
+    margin-bottom: 90px;
+}
+.mb-100 {
+    margin-bottom: 100px;
+}
+.mb-120 {
+    margin-bottom: 120px;
+}
+.mb-150 {
+    margin-bottom: 150px;
+}
+.mb-200 {
+    margin-bottom: 200px;
+}

@@ -1,0 +1,88 @@
+/* TaRiF=================================== */
+
+.tarif {
+   display: grid;
+   grid-template: auto/repeat(4,1fr);
+   grid-gap: 10px;
+   &__wrap {
+      position: $rel;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #C2D1D9;
+      box-sizing: border-box;
+      border-radius: 30px;
+      padding: 40px 25px;
+   }
+
+   &__paket {
+      position: $rel;
+      right: -1px;
+      top: -1px;
+      color: $white;
+      background: $wblue;
+      padding: 15px;
+   }
+
+   &__inner {
+      margin-bottom: 70px;
+   }
+
+   &__title {
+      position: $rel;
+      text-align: center;
+      color: $dblue;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      @extend %ff2;
+      font-weight: 600;
+      font-size: 17px;
+      &:before {
+         position: $abs;
+         left: 50%;
+         transform: translate(-50%,0);
+         content: '';
+         background: $wblue;
+         width: 40px;
+         height: 2px;
+         bottom: 0;
+      }
+   }
+
+   &__price {
+      @extend %ff2;
+      color: #000;
+      margin-bottom: 30px;
+      text-align: center;
+      line-height: 1.2;
+      font-weight: 700;
+      font-size: 31px;
+      @extend %align-center;
+      & span {
+         @extend %ff1;
+         color: #737373;
+         line-height: 1.2;
+         font-size: 18px;
+         font-weight: 400;
+         margin-left: 5px;
+      }
+   }
+
+   &__text {
+      &:last-child {
+         margin: 0;
+      }
+      line-height: 1.2;
+      font-size: 14px;
+      color: #737373;
+      @extend %ff1;
+      & span {
+         color: $wblue;
+         display: inline-block;
+         font-weight: 700;
+         font-size: 16px;
+      }
+   }
+}

@@ -1,0 +1,135 @@
+/* O-KompAniI_BloCk===================================== */
+.o-kompanii-block {
+   position: $rel;
+}
+ 
+.o-kompanii {
+   &.first {
+      display: grid;
+      grid-template: auto/35% calc(65% - 90px);
+      grid-column-gap: 90px;
+   } 
+   &__img {
+   }
+
+   &__wrap {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   &__btns {
+      @extend %align-center;
+      grid-gap: 10px;
+   }
+
+   &__btn {
+      @extend %align-center;
+      color: $wblue;
+      transition: $trans;
+      border: 2px solid $wblue;
+      box-sizing: border-box;
+      border-radius: 60px;
+      padding: 12px 34px;
+      @extend %ff1;
+      font-size: 17px;
+      line-height: 1.2;
+      font-weight: 700;
+      & svg {
+         margin-left: 10px;
+         & path {
+            transition: $trans;
+         }
+      }
+      &:hover {
+         background: $wblue;
+         color: $white;
+         & svg path {
+            fill: $white;
+         }
+      }
+   }
+}
+
+ 
+.seo-block {
+}
+
+.seo {
+   display: grid;
+   grid-gap: 20px;
+   grid-template: auto/repeat(4,1fr);
+   &__wrap {
+      text-align: center;
+      cursor: pointer;
+      transition: $trans;
+      padding: 30px 20px;
+      position: $rel;
+      &:not(:last-child):before {
+         position: $abs;
+         right: -12px;
+         top: 50%;
+         transform: translate(0, -50%);
+         content: '';
+         background: url('/public/images/seo.svg') no-repeat center;
+         background-size: contain;
+         width: 9px;
+         height: 100px;
+      }
+      &:hover {
+         background: $wblue;
+         box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+         & p {
+            color: $white !important;
+         }
+         & svg path {
+            fill: $white;
+         }
+      }
+   }
+
+   &__img {
+      position: $rel;
+      @extend %align-center;
+      justify-content: center;
+      margin-bottom: 23px;
+      & svg {
+         & path {
+            transition: $trans;
+         }
+      }
+   }
+
+   &__number {
+      position: $abs;
+      transition: $trans;
+      top: 0;
+      left: 0;
+      color: $wblue;
+      font-weight: 700;
+      margin: 0;
+      font-size: 18px;
+   }
+
+   &__inner {
+      transition: $trans;
+      P {
+         transition: $trans;
+      }
+      p:last-child {
+         margin: 0;
+         color: #666;
+         font-size: 15px;
+         line-height: 1.2;
+      }
+   }
+
+   &__title { 
+      margin-bottom: 8px;
+      font-weight: 700;
+      @extend %ff2;
+      line-height: 1.2;
+      color: $dblue;
+   }
+}

@@ -1,0 +1,89 @@
+/* HeAdeR =========================================== */
+.header {
+   position: fixed;
+   left: 0;
+   width: $pro100;
+   top: 0;
+   transition: $trans;
+   z-index: 5;
+   &.fix {
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+       background: $white;
+      & .header__wrap {
+         padding: 15px 0;
+      }
+   }
+   &__wrap {
+      @extend %fbc;
+      padding: 25px 0;
+      transition: $trans;
+   }
+   & a.btn1{
+      font-size: 15px;
+   }
+   &__logo {
+   }
+
+   &__inner {
+      @extend %fbc;
+      width: 83%;
+   }
+
+   &__nav {
+      width: 55%;
+   }
+
+   &__ul {
+      @extend %fbc;
+   }
+
+   &__link {
+      transition: $trans;
+      color: $dblue;
+      @extend %ff1;
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 16px;
+      transition: $trans;
+      &:hover {
+         color: $wblue;
+      }
+   }
+
+   &__phone {
+      @extend %align-center;
+      transition: $trans;
+      color: $dblue;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 1.2;
+      @extend %ff1;
+      &:hover {
+         color: $wblue;
+      }
+      & img {
+         margin-right: 10px;
+      }
+   }
+}
+
+.btn1,
+a.btn1 {
+   padding: 12px 34px;
+   display: inline-block;
+   color: $white;
+   transition: $trans;
+   border: 2px solid $wblue !important;
+   outline: transparent;
+   font-weight: 700;
+   font-size: 17px;
+   line-height: 1.2;
+   @extend %ff1;
+   border-radius: $px60;
+   background: $wblue;
+   box-shadow: 0px 2px 15px rgba(21, 158, 217, 0.25);
+   &:hover {
+      background: $white;
+      color: $wblue;
+   }
+}

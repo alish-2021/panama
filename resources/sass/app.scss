@@ -1,0 +1,46 @@
+// Variables
+@import 'variables';
+@import "_bootstrap";
+@import '_variables';
+@import '_font';
+@import '_header';
+@import '_index';
+@import '_o-kompanii';
+@import '_tarif';
+@import '_footer';
+
+/*
+font-family: 'Exo 2', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+
+.block-subtitle {
+    @extend %ff2;
+    line-height: 1.2;
+    font-weight: 500;
+    color: $dblue;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.block-title {
+    font-size: 37px;
+    line-height: 1.2;
+    font-weight: 700;
+    @extend %ff2;
+    color: $dblue;
+}
+
+.block-text {
+    & .block-title {
+        margin-bottom: 0;
+        text-align: center;
+        margin-top: 18px;
+    }
+    & .block-subtitle {
+        margin: 0;
+        text-align: center;
+    }
+}
+

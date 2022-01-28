@@ -1,0 +1,139 @@
+/* InDeX ======================================= */
+.banner-block {
+	position: $rel;
+}
+
+.banner {
+	position: $rel;
+	height: 100vh;
+	@extend %fbc;
+	&__wrap {
+		width: 46%;
+	}
+
+	&__subtitle {
+		letter-spacing: 0.1em;
+		margin-bottom: 12px;
+		line-height: 1.2;
+		color: $dblue;
+		font-size: 16px;
+		font-weight: 700;
+		text-transform: uppercase;
+		@extend %ff2;
+	}
+
+	&__title {
+		line-height: 1.2;
+		color: $dblue;
+		font-size: 74px;
+		margin-bottom: 24px;
+		font-weight: 700;
+		@extend %ff2;
+		& span {
+			display: block;
+			color: $wblue;
+		}
+	}
+
+	&__text {
+		margin-bottom: 30px;
+	}
+
+	&__btn {
+		& span {
+			position: $rel;
+			width: 25px;
+			height: 25px;
+			border: 1px solid #666;
+			border-radius: 5px;
+			margin-right: 14px;
+			&:before {
+				position: $abs;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				content: '';
+				background: url('/images/banner-btn.svg') no-repeat center;
+				background-size: contain;
+				width: 10px;
+				transition: $trans;
+				height: 12px;
+			}
+		}
+		color: #666;
+		font-size: 14px;
+		line-height: 1.2;
+		@extend %align-center;
+		@extend %ff1;
+		position: $abs;
+		bottom: 60px;
+		&:hover {
+			color: #666;
+		}
+	}
+
+	&__img {
+		width: 46%;
+	}
+}
+
+
+.analatika-block {
+	position: $rel;
+	margin-top: 120px;
+	background: linear-gradient(210.3deg, #CED8D6 -3.31%, #EEE5D6 103.78%);
+}
+.analatika {
+	position: $rel;
+	padding: 60px 0;
+	&__wrap {
+		position: $rel;
+		width: 50%;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		position: $rel;
+		color: $dblue;
+		font-weight: 700;
+		@extend %ff2;
+		font-size: 34px;
+	}
+
+	&__img {
+		position: $abs;
+		right: 0;
+		bottom: 0;
+		width: 45%;
+	}
+}
+
+.partnery-block {
+	padding: 80px 0;
+	background: linear-gradient(210.3deg, #CED8D6 -3.31%, #EEE5D6 103.78%);
+	&__wrap {
+		@extend %fbc;
+	}
+	&__title {
+		position: $rel;
+		color: $dblue;
+		font-size: 27px;
+		line-height: 1.2;
+		font-weight: 700;
+		@extend %ff2;
+		margin: 0;
+		width: 18%;
+	}
+}
+
+
+.partnery {
+	width: 78%;
+	position: $rel;
+	@extend %fbc;
+	grid-gap: 20px;
+	&__wrap {
+		position: $rel;
+		@extend %center-center;
+	}
+}

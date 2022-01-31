@@ -21,7 +21,7 @@
                 {{$article->title}}
             </div>
             <div class="user-list__desc">
-                {{Str::limit($article->preview_desc, 90)}}
+                {{Str::limit($article->desc, 90)}}
             </div>
             <div class="user-list__btns">
                 <a href="{{ route('article.edit', $article->id) }}"><img src="{{asset('images/admin/edit.svg')}}" alt=""></a>

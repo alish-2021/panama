@@ -142,6 +142,10 @@ p {
   margin-bottom: 200px;
 }
 
+.top-block {
+  margin-top: 150px;
+}
+
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -8460,6 +8464,10 @@ p {
   margin-bottom: 200px;
 }
 
+.top-block {
+  margin-top: 150px;
+}
+
 @font-face {
   font-family: "Roboto";
   src: local("Roboto Regular"), local("Roboto-Regular"), url(/fonts/Roboto-Regular.woff2?a25806274237d06e00a6888155519b98) format("woff2"), url(/fonts/Roboto-Regular.woff?31012f9b3e3da44f87e842e419bc267a) format("woff"), url(/fonts/Roboto-Regular.ttf?25e40da956314b12d333fe72cc420957) format("truetype");
@@ -8711,6 +8719,16 @@ a.btn1:hover {
 .o-kompanii.first {
   display: grid;
   grid-template: auto/35% calc(65% - 90px);
+  grid-column-gap: 90px;
+}
+.o-kompanii.second {
+  display: grid;
+  grid-template: auto/calc(61% - 90px) 39%;
+  grid-column-gap: 90px;
+}
+.o-kompanii.third {
+  display: grid;
+  grid-template: auto/44% calc(56% - 90px);
   grid-column-gap: 90px;
 }
 .o-kompanii__wrap {

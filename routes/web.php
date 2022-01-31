@@ -15,11 +15,11 @@ use App\Http\Controllers\panel\ArticleController;
 */
 
 Route::get('/', [PageController::class, 'indexPage'])->name('page.index');
-Auth::routes();
+Route::get('/article', [PageController::class, 'articlePage'])->name('page.article');
 
-Route::group(['prefix' => 'panel'],  function(){
+Auth::routes();
+Route::middleware(['middleware' => 'auth'])->prefix('panel')->group(function (){
     Route::get('/', function (){return view('panel.index');})->name('panel.index');
     Route::resource('article', ArticleController::class);
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

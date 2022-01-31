@@ -2,14 +2,24 @@
 .o-kompanii-block {
    position: $rel;
 }
- 
+
 .o-kompanii {
-   &.first {
-      display: grid;
-      grid-template: auto/35% calc(65% - 90px);
-      grid-column-gap: 90px;
-   } 
-   &__img {
+    &.first {
+        display: grid;
+        grid-template: auto/35% calc(65% - 90px);
+        grid-column-gap: 90px;
+    }
+    &.second {
+        display: grid;
+        grid-template: auto/calc(61% - 90px) 39%;
+        grid-column-gap: 90px;
+    }
+    &.third {
+        display: grid;
+        grid-template: auto/44% calc(56% - 90px);
+        grid-column-gap: 90px;
+    }
+    &__img {
    }
 
    &__wrap {
@@ -52,7 +62,7 @@
    }
 }
 
- 
+
 .seo-block {
 }
 
@@ -125,7 +135,7 @@
       }
    }
 
-   &__title { 
+   &__title {
       margin-bottom: 8px;
       font-weight: 700;
       @extend %ff2;

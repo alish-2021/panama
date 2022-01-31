@@ -17,17 +17,11 @@
                 </div>
             </div>
             <div class="create__wrap">
-                <p class="create__title">Мини описнаие (превью)</p>
-                <div class="create__inner">
-                    <textarea class="create__text" name="preview_desc">{{ old('preview_desc') }}</textarea>
-                    @if (session('errors'))
-                        <span class="create__invalid">это поле обязательно для заполнения </span>
-                    @endif
-                </div>
-            </div>
-            <div class="create__wrap">
                 <p class="create__title">Картинка (превью)</p>
                 <input type="file" name="preview_img" class="create__inputfile">
+                @if (session('errors'))
+                    <span class="create__invalid">это поле обязательно для заполнения </span>
+                @endif
             </div>
             <div class="create__wrap">
                 <p class="create__title">Описание</p>
@@ -36,12 +30,6 @@
                     @if (session('errors'))
                         <span class="create__invalid">это поле обязательно для заполнения </span>
                     @endif
-                </div>
-            </div>
-            <div class="create__wrap">
-                <p class="create__title">Картинка</p>
-                <div class="create__inner">
-                    <input type="file" name="img" class="create__inputfile">
                 </div>
             </div>
             <button class="create__btn" type="submit">Добавить <span>+</span></button>

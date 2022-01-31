@@ -16,7 +16,6 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::paginate(10);
-
         return view('panel.article.index', compact('articles'));
     }
 
@@ -38,16 +37,22 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
+        $request->validate([
             'title' =>  ['required', 'max:100'],
-            'preview_desc' =>  ['required', 'max:200'],
             'desc' =>  ['required', 'min:10'],
+            'preview_img' => ['required', 'mimes:svg,png,jpg,jpeg|max:10000']
         ]);
-        if(!$data){
+        if(!$request){
             return redirect()->route('article.create')->withErrors($data);
         }
 
-        Article::create($data);
+        $path_preview = $request->file('preview_img')->store('upload', 'public');
+
+        Article::create([
+            'title' => $request->title,
+            'desc' => $request->desc,
+            'preview_img' => $path_preview,
+        ]);
         return redirect()->route('article.index')->withSuccess('Успешно добален !!!');
     }
 
@@ -83,21 +88,21 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        $data = $request->validate([
+        $request->validate([
             'title' => ['required', 'max:100'] ,
-            'preview_desc' => ['required', 'max:200'],
             'desc' => ['required', 'min:100'],
+            'preview_img' => ['required', 'mimes:svg,png,jpg,jpeg|max:10000'],
         ]);
 
-        if(!$data){
+        if(!$request){
             return redirect()->route('article.edit')->withErrors($data);
         }
+
+        $path_preview = $request->file('preview_img')->store('upload', 'public');
         $article->update([
             'title' => $request->title,
-            'preview_desc' => $request->preview_desc,
             'desc' => $request->desc,
-            'preview_img' => $request->preview_img,
-            'img' => $request->img,
+            'preview_img' => $path_preview,
         ]);
         return redirect()->route('article.index')->withSuccess('Успешно обновлен !!!');
     }

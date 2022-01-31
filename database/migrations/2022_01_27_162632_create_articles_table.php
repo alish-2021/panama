@@ -17,9 +17,7 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->string('title', 250)->unique();
             $table->text('preview_img')->nullable();
-            $table->string('preview_desc')->nullable();
             $table->longText('desc')->nullable();
-            $table->text('img')->nullable();
             $table->timestamps();
         });
     }

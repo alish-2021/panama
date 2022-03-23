@@ -42,6 +42,12 @@
             <li>
                 <a href="{{route('article.index')}}" class="header__link">
                     <img src="{{ asset('images/icon/newspaper.svg') }}" alt="">
+                    Cтатьи
+                </a>
+            </li>
+            <li>
+                <a href="{{route('blog.index')}}" class="header__link">
+                    <img src="{{ asset('images/icon/newspaper.svg') }}" alt="">
                     Блог
                 </a>
             </li>

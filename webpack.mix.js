@@ -11,12 +11,15 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.scripts([
+mix.scripts(
+[
     'resources/js/jquery.js',
-    'resources/js/bootstrap.min.js',
     'resources/js/slick.min.js',
     'resources/js/script.js',
-], 'public/js/app.js');
+    ], 'public/js/app.js');
+
+mix.js('resources/js/app.js', 'public/js/vue.js')
+    .vue();
 
 mix.sass('resources/sass/app.scss', 'css')
     .sass('resources/sass/panel.scss', 'css') ;

@@ -2,6 +2,7 @@
 $(window).scroll(function () {
     $('.header').toggleClass('fix', $(this).scrollTop() > 0);
 });
+
 /*YakoR====================================*/
 $('.yakor').on('click', function () {
     var el = $(this);
@@ -14,3 +15,4 @@ $('.yakor').on('click', function () {
     }
     return false;
 });
+

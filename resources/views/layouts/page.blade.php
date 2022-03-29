@@ -10,7 +10,9 @@
 </head>
 <body>
 
-@include('site.header')
+<header id="header">
+    @include('site.header')
+</header>
 
 <main>
     @yield('content')
@@ -19,5 +21,6 @@
 @include('site.footer')
 
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/vue.js') }}"></script>
 </body>
 </html>

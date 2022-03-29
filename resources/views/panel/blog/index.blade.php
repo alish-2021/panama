@@ -7,9 +7,6 @@
         <div class="user-block__wrap">
             <a href="{{ route('blog.create') }}" class="user-block__btn">Добавить блог <span>+</span></a>
         </div>
-        @if (session('success'))
-            <p class="user-block__success">{{ session('success') }}</p>
-        @endif
 
         <div class="user-list">
             @foreach($blogs as $blog)
